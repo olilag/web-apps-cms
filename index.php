@@ -1,5 +1,8 @@
 <?php
 
+// suppress warning for line route() + 6
+error_reporting(E_ERROR | E_PARSE);
+
 require_once 'views/article-view.php';
 require_once 'models/article-model.php';
 
@@ -222,6 +225,7 @@ class Controller
             $_SESSION['disliked'] = [];
         }
         list($target, $params) = $this->route();
+        error_log("$target");
         try {
             $this->dispatch($target, $params);
         } catch (Exception $e) {

@@ -1,19 +1,23 @@
 <?php
 
+require_once __DIR__ . '/../db-provider/providers.php';
+
 class ArticleModel
 {
     private array $config;
-    private $db;
+    private DbConnection $db;
+
     public function __construct()
     {
         include 'db_config.php';
         $this->config = $db_config;
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+        $provider = DbProviders::get_provider("mysqli");
+        $this->db = $provider->create_connection();
     }
 
     public function dbConnect()
     {
-        $this->db = new mysqli($this->config['server'], $this->config['login'], $this->config['password'], $this->config['database'], $this->config['port']);
+        $this->db->connect($this->config['server'], $this->config['login'], $this->config['password'], $this->config['database'], intval($this->config['port']));
     }
 
     public function dbClose()
