@@ -13,7 +13,7 @@ class ArticleModel
 
     public function dbConnect()
     {
-        $this->db = new mysqli($this->config['server'], $this->config['login'], $this->config['password'], $this->config['database']);
+        $this->db = new mysqli($this->config['server'], $this->config['login'], $this->config['password'], $this->config['database'], $this->config['port']);
     }
 
     public function dbClose()

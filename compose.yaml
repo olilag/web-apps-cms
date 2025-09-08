@@ -1,0 +1,29 @@
+services:
+  mariadb:
+    image: mariadb
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./articles.sql:/docker-entrypoint-initdb.d/1.sql"
+      - maria_data:/var/lib/mysql
+
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "8080:80"
+    depends_on:
+      - mariadb
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+volumes:
+  maria_data:
