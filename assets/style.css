@@ -1,0 +1,200 @@
+
+/*:root {
+
+}*/
+
+/* forms */
+.article-name {
+    width: 28em;
+    margin-top: 12px;
+    display: block;
+    border-style: ridge;
+}
+
+.label-name {
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    display: block;
+}
+
+/* dialog */
+#create-dialog::backdrop {
+    backdrop-filter: blur(2px);
+}
+
+/* article list*/
+#content {
+    min-width: 540px;
+    max-width: 650px;
+    min-height: 500px;
+    margin: 75px auto;
+    border: 2px solid black;
+    padding: 40px 40px 60px;
+}
+
+#articles {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+    min-height: 400px;
+}
+
+#articles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#articles ul li {
+    display: block;
+    margin: 20px 0;
+}
+
+.article-buttons {
+    float: right;
+    margin-right: 20px;
+    min-width: 170px;
+    max-width: 360px;
+}
+
+.article-buttons a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dislikes {
+    margin-left: 25px;
+}
+
+#number-likes {
+    margin-right: 5px;
+}
+
+#number-dislikes {
+    margin-right: 213px;
+}
+
+/* links */
+a:link {
+    color: lightskyblue;
+}
+
+a:visited {
+    color: lightskyblue;
+}
+
+/* article */
+#content p {
+    min-height: 400px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+#like {
+    margin-left: 10px;
+}
+
+.liked {
+    color: whitesmoke;
+    background-color: green;
+}
+
+.disliked {
+    color: black;
+    background-color: red;
+}
+
+/* article-edit */
+#edit {
+    min-height: 400px;
+    margin: 16px 0;
+}
+
+#edit #name {
+    width: 99%;
+    height: 2em;
+}
+
+#article-content {
+    display: block;
+    width: 99%;
+    height: 280px;
+    resize: none;
+    cursor: auto;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+/* buttons */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.sort {
+    width: 17px;
+    min-width: 10px;
+    padding: 0;
+    margin-left: 17px;
+}
+
+.like-dislike-buttons {
+    margin: 0 auto;
+    min-width: 200px;
+}
+
+#page-count {
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: large;
+}
+
+button {
+    min-width: 90px;
+    height: 45px;
+    font-size: large;
+    border-style: ridge;
+}
+
+.delete {
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    min-width: 0;
+    font-size: medium;
+    font-weight: bold;
+    height: auto;
+}
+
+.green {
+    color: whitesmoke;
+    background-color: green;
+}
+
+.dialog-button {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.dialog-disabled {
+    background-color: lightgreen;
+    color: grey;
+}
+
+.red {
+    color: black;
+    background-color: red;
+}
+
+.blue {
+    color: black;
+    background-color: lightskyblue;
+}
