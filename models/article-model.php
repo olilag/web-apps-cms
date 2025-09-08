@@ -11,7 +11,7 @@ class ArticleModel
     {
         include 'db_config.php';
         $this->config = $db_config;
-        $provider = DbProviders::get_provider("mysqli");
+        $provider = DbProviders::get_provider($this->config['provider']);
         $this->db = $provider->create_connection();
     }
 

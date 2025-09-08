@@ -1,13 +1,22 @@
 services:
-  mariadb:
-    image: mariadb
+  #db:
+  #  image: mariadb
+  #  env_file:
+  #    - .env
+  #  ports:
+  #    - "3306:3306"
+  #  volumes:
+  #    - "./articles-mysql.sql:/docker-entrypoint-initdb.d/1.sql"
+  #    - maria_data:/var/lib/mysql
+  db:
+    image: postgres
     env_file:
       - .env
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - "./articles.sql:/docker-entrypoint-initdb.d/1.sql"
-      - maria_data:/var/lib/mysql
+      - "./articles-pgsql.sql:/docker-entrypoint-initdb.d/init.sql"
+      - postgres_data:/var/lib/postgresql/data/
 
   app:
     build:
@@ -17,7 +26,7 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - mariadb
+      - db
 
   adminer:
     image: adminer
@@ -27,3 +36,4 @@ services:
 
 volumes:
   maria_data:
+  postgres_data:

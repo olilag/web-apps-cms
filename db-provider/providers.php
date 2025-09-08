@@ -11,6 +11,8 @@ class DbProviders
                 require_once __DIR__ . '/mysqli/provider.php';
                 return new MySQLiProvider();
             case "pgsql":
+                require_once __DIR__ . '/pgsql/provider.php';
+                return new PgSQLProvider();
             default:
                 throw new Exception("Unsupported DB provider");
         }

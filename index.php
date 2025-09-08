@@ -225,7 +225,6 @@ class Controller
             $_SESSION['disliked'] = [];
         }
         list($target, $params) = $this->route();
-        error_log("$target");
         try {
             $this->dispatch($target, $params);
         } catch (Exception $e) {
