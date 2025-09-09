@@ -1,6 +1,6 @@
 # Simple CMS
 
-Tento projekt vznikol pôvodne ako záverečný programátorký test na predmet Programovanie webových aplikácii. Následne bol rozšírený pre potreby Návrhových vzorov. Špecifikácia pôvodného projektu sa nachádza [tu](https://webik.ms.mff.cuni.cz/nswi142/semestral-work/specification-cs.html).
+Tento projekt vznikol pôvodne ako záverečný programátorký test na predmet Programovanie webových aplikácii. Následne bol rozšírený pre potreby Návrhových vzorov. Špecifikácia pôvodného projektu viac menej odpovedá [tej z tohto roku](https://webik.ms.mff.cuni.cz/nswi142/semestral-work/specification-cs.html).
 
 ## Rozšírenie
 
